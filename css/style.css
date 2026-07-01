@@ -5,20 +5,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Mediterraan kleurenpalet */
-  --clr-primary:      #c0392b;
-  --clr-primary-dk:   #962d22;
-  --clr-primary-lt:   #e8645a;
-  --clr-gold:         #d4a843;
+  /* Merkwaarden Narbonne.nl */
+  --clr-primary:      #C13B2B;
+  --clr-primary-dk:   #9e2f21;
+  --clr-primary-lt:   #d96b62;
+  --clr-gold:         #D8A24A;
   --clr-olive:        #4a7c59;
-  --clr-sand:         #f5ede0;
-  --clr-sand-dk:      #ede0cc;
-  --clr-warm-white:   #faf6f1;
-  --clr-dark:         #2d1b10;
+  --clr-sand:         #ede5d8;
+  --clr-sand-dk:      #e0d5c2;
+  --clr-warm-white:   #F4EFE8;
+  --clr-dark:         #2A2320;
   --clr-dark-2:       #3d2b1f;
-  --clr-text:         #3a2a1e;
+  --clr-text:         #2A2320;
   --clr-muted:        #6b5a4e;
-  --clr-border:       #e8ddd0;
+  --clr-border:       #ddd5c5;
   --clr-white:        #fff;
 
   --font-display:  'Playfair Display', Georgia, serif;
@@ -82,16 +82,31 @@ img { max-width: 100%; display: block; }
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--clr-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
   text-decoration: none;
-  letter-spacing: -.3px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.logo:hover { text-decoration: none; opacity: .85; }
+.logo:hover { opacity: .85; text-decoration: none; }
+
+.logo-icon { display: block; flex-shrink: 0; }
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--clr-dark);
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+
+.logo-dot { color: var(--clr-primary); }
+
+/* Logo op donkere achtergrond (footer) */
+.site-footer .logo-text { color: var(--clr-white); }
 
 .site-nav {
   display: flex;
