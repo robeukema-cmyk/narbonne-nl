@@ -1,0 +1,11 @@
+<svg width="430" height="90" viewBox="0 0 430 90" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+  </defs>
+  <rect x="0" y="0" width="430" height="90" fill="none"></rect>
+  <g transform="translate(4,28)">
+    <path d="M6 26 A22 22 0 0 1 50 26" fill="#D8A24A"></path>
+    <line x1="0" y1="31" x2="56" y2="31" stroke="#F4EFE8" stroke-width="3" stroke-linecap="round"></line>
+  </g>
+  <text x="80" y="62" class="wm" fill="#F4EFE8">Narbonne<tspan fill="#D8A24A">.</tspan>nl</text>
+</svg>
