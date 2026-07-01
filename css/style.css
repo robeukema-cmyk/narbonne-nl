@@ -676,6 +676,29 @@ section > h2,
 .prose a { color: var(--clr-primary); border-bottom: 1px solid currentColor; }
 .prose a:hover { opacity: .75; text-decoration: none; }
 
+.prose-figure {
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--clr-border);
+}
+
+.prose-figure img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.prose-figure figcaption {
+  background: var(--clr-sand);
+  color: var(--clr-muted);
+  font-size: .82rem;
+  padding: .65rem 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
 /* === Footer === */
 .site-footer {
   background: var(--clr-dark);
