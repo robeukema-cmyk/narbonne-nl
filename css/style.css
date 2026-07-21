@@ -383,7 +383,7 @@ section > h2,
 }
 
 .card-img {
-  height: 180px;
+  height: 200px;
   overflow: hidden;
   background: var(--clr-sand);
   position: relative;
