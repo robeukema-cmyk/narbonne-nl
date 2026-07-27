@@ -1058,3 +1058,79 @@ section > h2,
   .page-hero { padding: 2.5rem 1rem; }
   .hero h1 { font-size: 2.75rem; }
 }
+
+/* === Stijlgids (interne referentiepagina) === */
+.sg-intro { max-width: 760px; margin-bottom: 1rem; }
+.sg-intro p { color: var(--clr-muted); line-height: 1.8; font-size: 1.02rem; }
+
+.sg-section { padding: 3rem 0; }
+.sg-section + .sg-section { border-top: 1px solid var(--clr-border); }
+
+.sg-section > h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--clr-dark);
+  margin-bottom: .5rem;
+}
+
+.sg-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--clr-primary-dk);
+  margin: 2rem 0 .75rem;
+}
+
+.sg-desc {
+  color: var(--clr-muted);
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.sg-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sg-swatch {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--clr-white);
+}
+
+.sg-swatch-color { height: 56px; }
+
+.sg-swatch-meta { padding: .6rem .8rem; }
+.sg-swatch-meta strong { display: block; font-size: .82rem; color: var(--clr-dark); margin-bottom: .15rem; }
+.sg-swatch-meta code { font-size: .72rem; color: var(--clr-muted); word-break: break-all; }
+
+.sg-demo {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background: var(--clr-white);
+}
+
+.sg-demo--dark { background: var(--clr-dark); }
+
+.sg-code {
+  background: var(--clr-dark);
+  color: #e8ddc8;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  font-family: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: .78rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  white-space: pre;
+}
+
+.sg-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+
+.sg-type-sample { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: .85rem; }
+.sg-type-sample code { font-size: .75rem; color: var(--clr-muted); flex-shrink: 0; }
