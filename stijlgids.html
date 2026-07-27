@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stijlgids — Narbonne.nl</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/narbonne_favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/narbonne_favicon-180.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" width="32" height="20" viewBox="0 0 56 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 26 A22 22 0 0 1 50 26" fill="#D8A24A"/>
+          <line x1="0" y1="31" x2="56" y2="31" stroke="#C13B2B" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">Narbonne<span class="logo-dot">.</span>nl</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu openen">&#9776;</button>
+      <nav class="site-nav">
+        <a href="bezienswaardigheden.html">Bezienswaardigheden</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="camping.html">Camping</a>
+        <a href="klimaat.html">Klimaat</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="auto-huren.html">Auto huren</a>
+        <a href="blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <p class="page-hero-sub">Interne referentie — niet gelinkt, niet geïndexeerd</p>
+      <h1>Stijlgids</h1>
+      <p>Alle herbruikbare onderdelen van Narbonne.nl op één plek: kleuren, typografie, knoppen, kaarten en complete paginasjablonen. Gebruik dit als naslagwerk om nieuwe pagina's consistent te houden, of als startpunt voor een volgende website.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span> Stijlgids
+    </nav>
+
+    <nav class="toc" aria-label="Inhoud van deze pagina">
+      <p class="toc-title">Inhoud</p>
+      <ol>
+        <li><a href="#kleuren">Kleuren</a></li>
+        <li><a href="#typografie">Typografie</a></li>
+        <li><a href="#knoppen">Knoppen</a></li>
+        <li><a href="#hero">Hero's</a></li>
+        <li><a href="#kaarten">Kaarten</a></li>
+        <li><a href="#toc-component">Inhoudsopgave (TOC)</a></li>
+        <li><a href="#statistieken">Statistiekenbalk</a></li>
+        <li><a href="#content-typografie">Contenttypografie (.prose)</a></li>
+        <li><a href="#footer">Footer</a></li>
+        <li><a href="#paginasjablonen">Paginasjablonen</a></li>
+      </ol>
+    </nav>
+
+    <div class="sg-intro">
+      <p>Deze site is opgebouwd uit losse, platte HTML-pagina's die allemaal hetzelfde stylesheet (<code>css/style.css</code>) en dezelfde componenten delen. Er is geen build-tool of templating-systeem — dat houdt het simpel, maar betekent ook dat header, footer en andere terugkerende blokken in elk bestand apart staan. Deze pagina documenteert die onderdelen zodat je ze bewust en consistent hergebruikt, in dit project of in een volgend.</p>
+    </div>
+
+    <section id="kleuren" class="sg-section">
+      <h2>Kleuren</h2>
+      <p class="sg-desc">Gedefinieerd als CSS-variabelen bovenin <code>css/style.css</code> (<code>:root</code>). Gebruik altijd de variabele, nooit een losse hex-code, zodat het merk overal in sync blijft.</p>
+      <div class="sg-swatches">
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-primary)"></div><div class="sg-swatch-meta"><strong>Primary</strong><code>--clr-primary #C13B2B</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-primary-dk)"></div><div class="sg-swatch-meta"><strong>Primary donker</strong><code>--clr-primary-dk #9e2f21</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-primary-lt)"></div><div class="sg-swatch-meta"><strong>Primary licht</strong><code>--clr-primary-lt #d96b62</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-gold)"></div><div class="sg-swatch-meta"><strong>Gold</strong><code>--clr-gold #D8A24A</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-olive)"></div><div class="sg-swatch-meta"><strong>Olive</strong><code>--clr-olive #4a7c59</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-sand)"></div><div class="sg-swatch-meta"><strong>Sand</strong><code>--clr-sand #ede5d8</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-sand-dk)"></div><div class="sg-swatch-meta"><strong>Sand donker</strong><code>--clr-sand-dk #e0d5c2</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-warm-white)"></div><div class="sg-swatch-meta"><strong>Warm wit (bg)</strong><code>--clr-warm-white #F4EFE8</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-dark)"></div><div class="sg-swatch-meta"><strong>Dark</strong><code>--clr-dark #2A2320</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-muted)"></div><div class="sg-swatch-meta"><strong>Muted tekst</strong><code>--clr-muted #6b5a4e</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-border)"></div><div class="sg-swatch-meta"><strong>Border</strong><code>--clr-border #ddd5c5</code></div></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:var(--clr-white);border-bottom:1px solid var(--clr-border)"></div><div class="sg-swatch-meta"><strong>White</strong><code>--clr-white #fff</code></div></div>
+      </div>
+    </section>
+
+    <section id="typografie" class="sg-section">
+      <h2>Typografie</h2>
+      <p class="sg-desc"><strong>Playfair Display</strong> (serif) voor alle koppen, <strong>Inter</strong> (sans) voor lopende tekst en UI. Beide via Google Fonts, ingesteld als <code>--font-display</code> en <code>--font-body</code>.</p>
+      <div class="sg-type-sample"><h1 style="font-family:var(--font-display);font-size:2.5rem;margin:0;">Paginatitel</h1><code>.hero h1 / .page-hero h1</code></div>
+      <div class="sg-type-sample"><h2 style="font-family:var(--font-display);font-size:1.7rem;margin:0;color:var(--clr-dark);">Sectiekop</h2><code>.section-heading</code></div>
+      <div class="sg-type-sample"><h2 style="font-family:var(--font-display);font-size:1.6rem;margin:0;color:var(--clr-dark);">Contentkop</h2><code>.prose h2</code></div>
+      <div class="sg-type-sample"><h3 style="font-family:var(--font-display);font-size:1.15rem;margin:0;color:var(--clr-primary);font-style:italic;">Subkop</h3><code>.prose h3</code></div>
+      <div class="sg-type-sample"><p style="margin:0;color:var(--clr-muted);">Lopende tekst — Inter, 1.02rem, line-height 1.85.</p><code>.prose p</code></div>
+      <div class="sg-type-sample"><span style="font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clr-primary);">Label / eyebrow</span><code>.section-label</code></div>
+    </section>
+
+    <section id="knoppen" class="sg-section">
+      <h2>Knoppen</h2>
+      <p class="sg-desc">Drie varianten: gouden primaire actie, outline voor op een donkere/foto-achtergrond, en een dunne outline in merkkleur voor secundaire acties op een lichte achtergrond.</p>
+      <div class="sg-demo">
+        <div class="sg-row">
+          <a href="#" class="btn" onclick="return false">Ontdek de stad</a>
+          <a href="#" class="btn-outline-dark" onclick="return false">Alle blogposts</a>
+        </div>
+      </div>
+      <div class="sg-demo sg-demo--dark">
+        <div class="sg-row">
+          <a href="#" class="btn-outline" onclick="return false" style="margin-top:1.5rem">Verblijf zoeken</a>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;a href="hotels.html" class="btn"&gt;Ontdek de stad&lt;/a&gt;
+&lt;a href="hotels.html" class="btn-outline"&gt;Verblijf zoeken&lt;/a&gt;  &lt;!-- op donkere/foto-achtergrond --&gt;
+&lt;a href="blog/" class="btn-outline-dark"&gt;Alle blogposts&lt;/a&gt;  &lt;!-- op lichte achtergrond --&gt;</pre>
+    </section>
+
+    <section id="hero" class="sg-section">
+      <h2>Hero's</h2>
+      <p class="sg-desc">Twee varianten. Geen losse live-demo hier (ze zijn bewust edge-to-edge en zouden deze pagina breken) — bekijk een live voorbeeld op <a href="index.html">de homepage</a> (grote hero) of <a href="hotels.html">Hotels</a> (page-hero met foto).</p>
+      <h3>Grote homepage-hero (alleen op index.html)</h3>
+      <pre class="sg-code">&lt;section class="hero"&gt;
+  &lt;div class="hero-bg"&gt;
+    &lt;img src="img/kathedraal-narbonne.webp" alt="..." /&gt;
+  &lt;/div&gt;
+  &lt;div class="hero-content"&gt;
+    &lt;span class="hero-eyebrow"&gt;Zuid-Frankrijk — Languedoc&lt;/span&gt;
+    &lt;h1&gt;Narbonne&lt;/h1&gt;
+    &lt;p class="hero-sub"&gt;Korte pay-off zin.&lt;/p&gt;
+    &lt;div class="hero-cta"&gt;
+      &lt;a href="bezienswaardigheden.html" class="btn"&gt;Ontdek de stad&lt;/a&gt;
+      &lt;a href="hotels.html" class="btn-outline"&gt;Verblijf zoeken&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+      <h3>Page-hero met foto (alle subpagina's)</h3>
+      <pre class="sg-code">&lt;div class="page-hero page-hero--img"&gt;
+  &lt;div class="page-hero-bg"&gt;
+    &lt;img src="img/[paginafoto].webp" alt="..." /&gt;
+  &lt;/div&gt;
+  &lt;div class="page-hero-content"&gt;
+    &lt;p class="page-hero-sub"&gt;Korte subtitel&lt;/p&gt;
+    &lt;h1&gt;Paginatitel&lt;/h1&gt;
+    &lt;p&gt;Eén of twee zinnen introductietekst.&lt;/p&gt;
+    &lt;a href="#anker" class="btn"&gt;Call to action&lt;/a&gt;  &lt;!-- optioneel --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <p class="sg-desc">Heeft de pagina geen geschikte foto? Gebruik dan de tekst-only variant zonder <code>--img</code> en zonder <code>.page-hero-bg</code>:</p>
+      <pre class="sg-code">&lt;div class="page-hero"&gt;
+  &lt;div class="page-hero-content"&gt;
+    &lt;p class="page-hero-sub"&gt;Subtitel&lt;/p&gt;
+    &lt;h1&gt;Paginatitel&lt;/h1&gt;
+    &lt;p&gt;Introductietekst.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </section>
+
+    <section id="kaarten" class="sg-section">
+      <h2>Kaarten</h2>
+      <h3>Contentkaart (met foto of gradient placeholder)</h3>
+      <div class="sg-demo">
+        <div class="card-grid">
+          <a href="#" class="card" onclick="return false">
+            <div class="card-img placeholder placeholder-bezienswaard">🏛️</div>
+            <div class="card-body">
+              <h3 style="font-family:var(--font-display);font-size:1.2rem;color:var(--clr-dark);margin-bottom:.75rem;">Kaarttitel</h3>
+              <p style="font-size:.9rem;color:var(--clr-muted);">Korte beschrijving van het kaartonderwerp, twee regels.</p>
+              <span class="card-link">Ontdek meer</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;a href="hotels.html" class="card"&gt;
+  &lt;div class="card-img"&gt;
+    &lt;img src="img/hotels-narbonne.jpg" alt="..." /&gt;
+  &lt;/div&gt;
+  &lt;!-- of, zonder foto: &lt;div class="card-img placeholder placeholder-hotels"&gt;🏨&lt;/div&gt; --&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3&gt;Hotels&lt;/h3&gt;
+    &lt;p&gt;Korte beschrijving.&lt;/p&gt;
+    &lt;span class="card-link"&gt;Bekijk hotels&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;!-- geef de omringende &lt;div&gt; class="card-grid" mee --&gt;
+&lt;!-- placeholder-varianten: -bezienswaard, -hotels, -camping, -klimaat, -restaurants, -auto --&gt;</pre>
+
+      <h3>Seizoenkaart (klimaat.html)</h3>
+      <div class="sg-demo">
+        <div class="season-card season-zomer" style="max-width:320px">
+          <div class="season-icon">☀️</div>
+          <div class="season-body">
+            <div class="season-period">Juni – Augustus</div>
+            <h3 style="font-family:var(--font-display);font-size:1.2rem;color:var(--clr-dark);margin-bottom:.6rem;">Zomer</h3>
+            <p style="font-size:.9rem;color:var(--clr-muted);">Korte omschrijving van het seizoen.</p>
+            <span class="season-tag">Strandweer</span>
+          </div>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;div class="season-card season-zomer"&gt;  &lt;!-- of -herfst, -winter, -lente --&gt;
+  &lt;div class="season-icon"&gt;☀️&lt;/div&gt;
+  &lt;div class="season-body"&gt;
+    &lt;div class="season-period"&gt;Juni – Augustus&lt;/div&gt;
+    &lt;h3&gt;Zomer&lt;/h3&gt;
+    &lt;p&gt;Omschrijving.&lt;/p&gt;
+    &lt;span class="season-tag"&gt;Strandweer&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+      <h3>Blogkaart</h3>
+      <div class="sg-demo">
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-img"></div>
+            <div class="blog-card-body">
+              <div class="blog-meta">
+                <span class="blog-date">30 juni 2026</span>
+                <span class="blog-tag">Reisgids</span>
+              </div>
+              <h3 style="font-family:var(--font-display);font-size:1.15rem;color:var(--clr-dark);margin-bottom:.6rem;"><a href="#" onclick="return false" style="color:inherit">Titel van het artikel</a></h3>
+              <p style="font-size:.9rem;color:var(--clr-muted);">Korte samenvatting van het blogartikel.</p>
+              <a href="#" class="lees-meer" onclick="return false">Lees meer</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;article class="blog-card"&gt;
+  &lt;div class="blog-card-img"&gt;
+    &lt;img src="img/..." alt="..." /&gt;  &lt;!-- weglaten geeft een gradient placeholder --&gt;
+  &lt;/div&gt;
+  &lt;div class="blog-card-body"&gt;
+    &lt;div class="blog-meta"&gt;
+      &lt;span class="blog-date"&gt;30 juni 2026&lt;/span&gt;
+      &lt;span class="blog-tag"&gt;Reisgids&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;&lt;a href="blog/artikel.html"&gt;Titel&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;Samenvatting.&lt;/p&gt;
+    &lt;a href="blog/artikel.html" class="lees-meer"&gt;Lees meer&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
+    </section>
+
+    <section id="toc-component" class="sg-section">
+      <h2>Inhoudsopgave (TOC)</h2>
+      <p class="sg-desc">Staat al bovenaan deze pagina live gedemonstreerd. Verplicht op elke pagina met meerdere <code>&lt;h2&gt;</code>'s in de <code>.prose</code>: geeft elk kop een <code>id</code>, en zet vóór de <code>&lt;section&gt;</code> met content een <code>.toc</code>-blok. Heeft de sectie ook <code>&lt;h3&gt;</code>'s, voeg dan een geneste <code>&lt;ul&gt;</code> toe (zie hotels.html of camping.html).</p>
+      <pre class="sg-code">&lt;nav class="toc" aria-label="Inhoud van deze pagina"&gt;
+  &lt;p class="toc-title"&gt;Inhoud&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#sectie-een"&gt;Titel van sectie 1&lt;/a&gt;
+      &lt;ul&gt;  &lt;!-- alleen als de sectie h3's heeft --&gt;
+        &lt;li&gt;&lt;a href="#subsectie"&gt;Subkop&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sectie-twee"&gt;Titel van sectie 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- en verderop, elke kop krijgt het bijpassende id: --&gt;
+&lt;h2 id="sectie-een"&gt;Titel van sectie 1&lt;/h2&gt;</pre>
+    </section>
+
+    <section id="statistieken" class="sg-section">
+      <h2>Statistiekenbalk</h2>
+      <p class="sg-desc">Volle-breedte donker blok met kerncijfers, gebruikt op de homepage. Staat los van de omliggende secties (margin boven én onder), zodat 'm nooit strak tegen een andere sectie aan zit.</p>
+      <div class="sg-demo sg-demo--dark" style="padding:0;overflow:hidden;">
+        <div class="facts-strip" style="margin:0">
+          <div class="container">
+            <div class="facts-grid">
+              <div><span class="fact-number">53.000</span><span class="fact-label">Inwoners</span></div>
+              <div><span class="fact-number">300+</span><span class="fact-label">Zonuren per jaar</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;section class="facts-strip"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="facts-grid"&gt;
+      &lt;div&gt;&lt;span class="fact-number"&gt;53.000&lt;/span&gt;&lt;span class="fact-label"&gt;Inwoners&lt;/span&gt;&lt;/div&gt;
+      &lt;!-- herhaal per statistiek --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+    </section>
+
+    <section id="content-typografie" class="sg-section">
+      <h2>Contenttypografie (.prose)</h2>
+      <p class="sg-desc">De wrapper voor lopende artikeltekst — gebruikt op elke subpagina en elk blogartikel. Max-breedte 760px voor leesbaarheid, automatische stijl voor <code>h2</code>, <code>h3</code>, <code>p</code>, <code>ul</code>, <code>strong</code>, <code>em</code> en links.</p>
+      <div class="sg-demo">
+        <div class="prose" style="max-width:none">
+          <h2 style="margin-top:0">Voorbeeldkop</h2>
+          <p>Lopende tekst met een <strong>vet accent</strong> en een <em>cursief accent</em>, plus een <a href="#" onclick="return false">link naar een andere pagina</a>.</p>
+          <ul><li>Een genummerd of opgesomd punt, met pijltje als marker.</li></ul>
+        </div>
+      </div>
+      <pre class="sg-code">&lt;section&gt;
+  &lt;div class="prose"&gt;
+    &lt;h2 id="anker"&gt;Kop&lt;/h2&gt;
+    &lt;p&gt;Tekst met &lt;strong&gt;vet&lt;/strong&gt; en &lt;em&gt;cursief&lt;/em&gt;.&lt;/p&gt;
+    &lt;ul&gt;&lt;li&gt;Puntje&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+    </section>
+
+    <section id="footer" class="sg-section">
+      <h2>Footer</h2>
+      <p class="sg-desc">Identiek op elke pagina (zie onderaan deze pagina voor een live voorbeeld). Let op het relatieve pad: op pagina's in <code>/blog/</code> wordt elke <code>href="index.html"</code> en <code>href="bezienswaardigheden.html"</code> <code>href="../index.html"</code> enzovoort.</p>
+      <pre class="sg-code">&lt;footer class="site-footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="footer-grid"&gt;
+      &lt;div class="footer-brand"&gt;
+        &lt;a href="index.html" class="logo"&gt;
+          &lt;svg class="logo-icon" width="28" height="17" viewBox="0 0 56 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"&gt;
+            &lt;path d="M6 26 A22 22 0 0 1 50 26" fill="#D8A24A"/&gt;
+            &lt;line x1="0" y1="31" x2="56" y2="31" stroke="#C13B2B" stroke-width="3" stroke-linecap="round"/&gt;
+          &lt;/svg&gt;
+          &lt;span class="logo-text"&gt;Narbonne&lt;span class="logo-dot"&gt;.&lt;/span&gt;nl&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;p&gt;Jouw Nederlandse reisgids voor Narbonne in Zuid-Frankrijk.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;&lt;h4&gt;Ontdekken&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="bezienswaardigheden.html"&gt;Bezienswaardigheden&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+      &lt;!-- + kolommen "Praktisch" en "Meer", zie een bestaande pagina --&gt;
+    &lt;/div&gt;
+    &lt;p class="footer-copy"&gt;&amp;copy; 2026 Narbonne.nl &amp;mdash; Alle rechten voorbehouden&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre>
+    </section>
+
+    <section id="paginasjablonen" class="sg-section">
+      <h2>Paginasjablonen</h2>
+      <p class="sg-desc">Start een nieuwe pagina altijd vanuit een van deze twee sjablonen — niet vanuit een leeg bestand. Dat is de eenvoudigste manier om structuur, SEO-meta (canonical, Open Graph, JSON-LD) en de inhoudsopgave consistent te houden. Vervang alles tussen <code>[haakjes]</code>.</p>
+
+      <h3>Standaard subpagina (Hotels, Camping, Restaurants, …)</h3>
+      <pre class="sg-code">&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;[Onderwerp] Narbonne - [Korte pitch] | Narbonne.nl&lt;/title&gt;
+  &lt;meta name="description" content="[150-160 tekens samenvatting voor Google]" /&gt;
+  &lt;link rel="canonical" href="https://www.narbonne.nl/[bestandsnaam].html" /&gt;
+  &lt;link rel="icon" type="image/png" sizes="32x32" href="img/narbonne_favicon-32.png" /&gt;
+  &lt;link rel="apple-touch-icon" sizes="180x180" href="img/narbonne_favicon-180.png" /&gt;
+  &lt;link rel="stylesheet" href="css/style.css" /&gt;
+  &lt;!-- Open Graph + Twitter: kopieer het blok uit een bestaande pagina en pas titel/beschrijving/afbeelding aan --&gt;
+  &lt;!-- JSON-LD BreadcrumbList: kopieer en pas de "name"/"item" velden aan --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- Header: identiek kopiëren van een bestaande pagina --&gt;
+  &lt;header class="site-header"&gt;…&lt;/header&gt;
+
+  &lt;div class="page-hero page-hero--img"&gt;
+    &lt;div class="page-hero-bg"&gt;&lt;img src="img/[paginafoto].webp" alt="[Alt-tekst]" /&gt;&lt;/div&gt;
+    &lt;div class="page-hero-content"&gt;
+      &lt;p class="page-hero-sub"&gt;[Korte subtitel]&lt;/p&gt;
+      &lt;h1&gt;[Paginatitel]&lt;/h1&gt;
+      &lt;p&gt;[Introductiezin]&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;main class="container"&gt;
+    &lt;nav class="breadcrumb"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;span&gt;›&lt;/span&gt; [Paginanaam]&lt;/nav&gt;
+
+    &lt;!-- alleen toevoegen als de pagina 2+ h2's heeft --&gt;
+    &lt;nav class="toc" aria-label="Inhoud van deze pagina"&gt;
+      &lt;p class="toc-title"&gt;Inhoud&lt;/p&gt;
+      &lt;ol&gt;&lt;li&gt;&lt;a href="#anker-1"&gt;[Kop 1]&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
+    &lt;/nav&gt;
+
+    &lt;section&gt;
+      &lt;div class="prose"&gt;
+        &lt;h2 id="anker-1"&gt;[Kop 1]&lt;/h2&gt;
+        &lt;p&gt;[Tekst]&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;!-- Footer: identiek kopiëren van een bestaande pagina (inclusief footer-brand logo) --&gt;
+  &lt;footer class="site-footer"&gt;…&lt;/footer&gt;
+
+  &lt;script src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <h3>Blogartikel (in /blog/, let op de <code>../</code> paden)</h3>
+      <pre class="sg-code">&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;[Artikeltitel] | Narbonne.nl&lt;/title&gt;
+  &lt;meta name="description" content="[Samenvatting]" /&gt;
+  &lt;link rel="canonical" href="https://www.narbonne.nl/blog/[bestandsnaam].html" /&gt;
+  &lt;link rel="icon" type="image/png" sizes="32x32" href="../img/narbonne_favicon-32.png" /&gt;
+  &lt;link rel="stylesheet" href="../css/style.css" /&gt;
+  &lt;!-- Open Graph (og:type="article" + article:published_time) en JSON-LD @graph
+       met BreadcrumbList + BlogPosting: kopieer uit een bestaand artikel --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header class="site-header"&gt;&lt;!-- zelfde als elke pagina, maar met ../ voor alle links --&gt;&lt;/header&gt;
+
+  &lt;div class="page-hero page-hero--img"&gt;
+    &lt;div class="page-hero-bg"&gt;&lt;img src="../img/[artikelfoto]" alt="[Alt-tekst]" /&gt;&lt;/div&gt;
+    &lt;div class="page-hero-content"&gt;
+      &lt;p class="page-hero-sub"&gt;[Datum] — [Categorie]&lt;/p&gt;
+      &lt;h1&gt;[Artikeltitel]&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;main class="container"&gt;
+    &lt;nav class="breadcrumb"&gt;
+      &lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;span&gt;›&lt;/span&gt;
+      &lt;a href="index.html"&gt;Blog&lt;/a&gt;&lt;span&gt;›&lt;/span&gt; [Artikeltitel]
+    &lt;/nav&gt;
+
+    &lt;!-- TOC bij 2+ h2's, zelfde patroon als bij een subpagina --&gt;
+
+    &lt;section&gt;
+      &lt;div class="prose"&gt;
+        &lt;p&gt;[Openingsalinea, geen kop]&lt;/p&gt;
+        &lt;h2 id="anker-1"&gt;[Kop 1]&lt;/h2&gt;
+        &lt;p&gt;[Tekst]&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;&lt;!-- zelfde als elke pagina, maar met ../ voor alle links --&gt;&lt;/footer&gt;
+
+  &lt;script src="../js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <p class="sg-desc">Nieuwe pagina toegevoegd aan het menu? Werk dan ook <code>sitemap.xml</code> bij, en voeg 'm toe aan de <code>&lt;nav class="site-nav"&gt;</code> en de footer op <em>alle</em> andere pagina's — dat is precies het handmatige werk dat bij deze site fouten oplevert (zoals de footer die eerder deze sessie op 7 van de 8 pagina's het logo miste). Vraag mij om dat sitebreed te doorzoeken en te controleren voor je 'm live zet.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <svg class="logo-icon" width="28" height="17" viewBox="0 0 56 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6 26 A22 22 0 0 1 50 26" fill="#D8A24A"/>
+              <line x1="0" y1="31" x2="56" y2="31" stroke="#C13B2B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-text">Narbonne<span class="logo-dot">.</span>nl</span>
+          </a>
+          <p>Jouw Nederlandse reisgids voor Narbonne in Zuid-Frankrijk.</p>
+        </div>
+        <div>
+          <h4>Ontdekken</h4>
+          <ul>
+            <li><a href="bezienswaardigheden.html">Bezienswaardigheden</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="klimaat.html">Klimaat</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Praktisch</h4>
+          <ul>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="camping.html">Camping</a></li>
+            <li><a href="auto-huren.html">Auto huren</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Meer</h4>
+          <ul>
+            <li><a href="blog/">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Narbonne.nl &mdash; Alle rechten voorbehouden</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
